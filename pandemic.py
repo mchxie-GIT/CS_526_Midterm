@@ -1,6 +1,5 @@
 import sys
 
-
 def spread_infection(board):
     n = len(board)
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
@@ -25,11 +24,10 @@ def spread_infection(board):
 
         if not new_infections:
             break
-
-        # Apply changes after checking the whole board for this day.
+            
+        #Apply changes after checking the whole board for this day
         for row, col in new_infections:
             board[row][col] = 1
-
 
 def main():
     with open(sys.argv[1]) as file:
@@ -47,7 +45,6 @@ def main():
             return
 
     print("There are no healthy counties left")
-
 
 if __name__ == "__main__":
     main()
